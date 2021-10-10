@@ -1,0 +1,20 @@
+[package]
+name = ''
+slug = ''
+version = ''
+authors = []
+description = ''
+
+[run]
+dependencies = ['https://github.com/hyperupcall/bash-args.git@v0.9.1']
+sourceDirs = []
+builtinDirs = []
+binDirs = []
+completionDirs = []
+manDirs = []
+
+[run.shellEnvironment]
+
+[run.setOptions]
+
+[run.shoptOptions]
