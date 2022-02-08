@@ -1,6 +1,6 @@
 # shelldoc
 
-Shelldoc is a small wrapper over the great [shdoc](https://github.com/reconquest/shdoc). It allows for the easy creation of Doxygen-like shell auto documentation sites
+An [shdoc](https://github.com/reconquest/shdoc) wrapper that does the heavy lifting
 
 ## Installation
 

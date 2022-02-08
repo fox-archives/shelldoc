@@ -27,19 +27,20 @@ main.shelldoc() {
 		exit 1
 	fi
 
-	shopt -s nullglob
-	shopt -s extglob
-	# TODO: absolute paths do not work
 	input_dir="${input_dir#./}"
-	for dir in "$PWD/$input_dir"/**/*/; do
-		for file in "${dir::-1}"/*.{bash,sh}; do
-			printf '%s\n' "./${file:${#PWD}+1}"
-			mkdir -p "./doc_output/${file%/*}"
-			shdoc < "$file" > "./doc_output/$file"
+	# for dir in "$PWD/$input_dir"/**/*/; do
+	# 	for file in "${dir::-1}"/*.{bash,sh}; do
+	# 		printf '%s\n' "./${file:${#PWD}+1}"
+	# 		mkdir -p "./doc_output/${file%/*}"
+	# 		shdoc < "$file" > "./doc_output/$file"
 
-			if [ -s "./doc_output/$file" ]; then
-				rm "./doc_output/$file"
-			fi
-		done; unset file
-	done; unset dir
+	# 		if [ -s "./doc_output/$file" ]; then
+	# 			rm "./doc_output/$file"
+	# 		fi
+	# 	done; unset file
+	# done; unset dir
+
+	for dir in ./**/public/?*.{bash,sh}; do
+		:
+	done
 }

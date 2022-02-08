@@ -1,13 +1,13 @@
 [package]
-name = ''
-slug = ''
-version = ''
-authors = []
-description = ''
+name = 'shelldoc'
+slug = 'shelldoc'
+version = '0.1.0'
+authors = ['Edwin Kofler <edwin@kofler.dev>']
+description = 'An shdoc wrapper that does the heavy lifting'
 
 [run]
-dependencies = ['https://github.com/hyperupcall/bash-args.git@v0.9.1']
-sourceDirs = []
+dependencies = []
+sourceDirs = ['pkg/lib/cmd', 'pkg/lib']
 builtinDirs = []
 binDirs = []
 completionDirs = []
@@ -16,5 +16,10 @@ manDirs = []
 [run.shellEnvironment]
 
 [run.setOptions]
+errexit = ' on'
+pipefail = 'on'
 
 [run.shoptOptions]
+extglob = 'on'
+nullglob = 'on'
+shift_verbose = 'on'
